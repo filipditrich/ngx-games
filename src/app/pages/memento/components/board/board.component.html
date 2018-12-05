@@ -1,0 +1,21 @@
+<div class="row d-flex flex-wrap justify-content-center">
+  <ng-container
+    *ngFor="let item of cards">
+    <app-card-text
+      *ngIf="item.type === 'text'"
+      [settings]="settings"
+      [item]="item"
+      [flipped]="item.flipped"
+      [found]="item.found"
+      (flip)="cardFlip($event)">
+    </app-card-text>
+    <app-card-image
+      *ngIf="item.type === 'img'"
+      [settings]="settings"
+      [item]="item"
+      [flipped]="item.flipped"
+      [found]="item.found"
+      (flip)="cardFlip($event)">
+    </app-card-image>
+  </ng-container>
+</div>

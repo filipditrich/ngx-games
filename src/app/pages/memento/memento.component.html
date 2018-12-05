@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-lg-10 bg-light fh-container m-auto">
+      <app-results
+        [flips]="flips"
+        [timeSpent]="timeSpent"
+        [found]="found.length"
+        [total]="prepared.length">
+      </app-results>
+      <app-board
+        [cards]="prepared"
+        [settings]="settings"
+        (onCardFlip)="cardFlip($event)">
+      </app-board>
+    </div>
+  </div>
+</div>

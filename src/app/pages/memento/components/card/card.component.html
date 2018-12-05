@@ -1,0 +1,12 @@
+<div class="memento-card-container"
+     [ngClass]="{ 'turned' : flipped, 'found': found }"
+     (click)="flipCard(item)">
+  <div class="memento-card col-sm-12 bg-white d-flex align-items-center justify-content-center">
+    <div class="card-face back"
+         [innerHTML]="backCardContent">
+    </div>
+    <div class="card-face front"
+         [innerHTML]="frontCardContent">
+    </div>
+  </div>
+</div>

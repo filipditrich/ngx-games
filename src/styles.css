@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+.fh-container {
+  min-height: 100vh;
+}
+.memento-card-container {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  perspective: 600px;
+}
+
+.memento-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 1s;
+}
+
+.memento-card img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.memento-card-container.turned .memento-card {
+  transform: rotateY(-180deg) translateX(-100%);
+}
+
+.memento-card-container.found {
+  opacity: 0.25;
+}
+
+.memento-card .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2B63AE;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.memento-card .card-face.front {
+  transform: rotateY(180deg);
+}
+
