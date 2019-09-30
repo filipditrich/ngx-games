@@ -3,8 +3,8 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "game": {
-      "root": "",
+    "ngx-games": {
+      "root": "./",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/game",
+            "outputPath": "dist/ngx-games",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "game:build"
+            "browserTarget": "ngx-games:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "game:build:production"
+              "browserTarget": "ngx-games:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "game:build"
+            "browserTarget": "ngx-games:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "game-e2e": {
+    "ngx-games-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "game:serve"
+            "devServerTarget": "ngx-games:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "game:serve:production"
+              "devServerTarget": "ngx-games:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "game"
+  "defaultProject": "ngx-games"
 }
