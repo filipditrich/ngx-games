@@ -16,8 +16,8 @@ export class MementoComponent implements OnInit {
   public prepared: IMementoCard[] = [];
   public flipped: IMementoCard[] = [];
   public found: IMementoCard[] = [];
-  protected timeSpent = 0;
-  protected flips = 0;
+  public timeSpent = 0;
+  public flips = 0;
   public timer;
   public settings = {
     max: 2,
@@ -29,7 +29,7 @@ export class MementoComponent implements OnInit {
               private title: Title) {}
 
   ngOnInit() {
-    this.title.setTitle('ngx-games » MEMENTO')
+    this.title.setTitle('ngx-games » MEMENTO');
     this.init();
   }
 
